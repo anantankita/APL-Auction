@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agentic Premier League Auction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <div class="logo">APL Auction Room</div>
+        <p>No API key needed. Build your best IPL XI with a local strategy advisor.</p>
+      </div>
+      <div class="header-stats">
+        <div class="hstat">
+          <span>Budget left</span>
+          <strong id="budgetValue">Rs 100.0 Cr</strong>
+        </div>
+        <div class="hstat">
+          <span>Squad</span>
+          <strong id="squadValue">0 / 11</strong>
+        </div>
+        <div class="hstat">
+          <span>Score</span>
+          <strong id="teamScore">0</strong>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="player-area">
+        <section class="coach-strip">
+          <div>
+            <span class="kicker">Local advisor</span>
+            <h2>Strategy coach</h2>
+            <p id="advisorText">Start by buying one opener or asking for a recommendation. The advisor runs locally in your browser using squad rules, budget, and player roles.</p>
+          </div>
+          <div class="advisor-actions">
+            <button id="analyseButton">Analyse squad</button>
+            <button id="suggestButton">Suggest next</button>
+            <button id="verdictButton">Final verdict</button>
+          </div>
+        </section>
+
+        <div class="section-head">
+          <div>
+            <span class="kicker">Player pool</span>
+            <h1>Buy players, balance roles, beat the auction.</h1>
+          </div>
+          <div class="filters" aria-label="Role filters">
+            <button class="filter active" data-filter="all">All</button>
+            <button class="filter" data-filter="BAT">Bat</button>
+            <button class="filter" data-filter="BOWL">Bowl</button>
+            <button class="filter" data-filter="AR">AR</button>
+            <button class="filter" data-filter="WK">WK</button>
+          </div>
+        </div>
+        <div class="game-guide">
+          <div><strong>1. Pick a player</strong><span>Set a bid and buy.</span></div>
+          <div><strong>2. Ask advisor</strong><span>Get local tactical advice.</span></div>
+          <div><strong>3. Complete XI</strong><span>Win with role balance.</span></div>
+        </div>
+        <div class="player-grid" id="playerGrid"></div>
+      </section>
+
+      <aside class="side-panel">
+        <section class="panel squad-panel">
+          <div class="panel-head">
+            <div>
+              <span class="kicker">Your squad</span>
+              <h2>Starting XI</h2>
+            </div>
+            <button class="ghost-button" id="resetButton">Reset</button>
+          </div>
+          <div class="squad-list" id="squadList"></div>
+          <div class="role-box">
+            <div class="role-title">Role balance</div>
+            <div class="role-meter" id="roleMeter"></div>
+            <div class="role-legend">
+              <span><i class="dot bat"></i><b id="batCount">0</b> bat</span>
+              <span><i class="dot bowl"></i><b id="bowlCount">0</b> bowl</span>
+              <span><i class="dot ar"></i><b id="arCount">0</b> AR</span>
+              <span><i class="dot wk"></i><b id="wkCount">0</b> WK</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel advisor-panel">
+          <div class="panel-head">
+            <div>
+              <span class="kicker">Game objective</span>
+              <h2>Win the auction</h2>
+            </div>
+            <span class="advisor-dot"></span>
+          </div>
+          <p>Build an XI with enough batting, bowling, all-round depth, and one keeper. A higher score means your squad is closer to a balanced IPL team.</p>
+        </section>
+      </aside>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
