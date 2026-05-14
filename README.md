@@ -1,41 +1,42 @@
-# APL Auction Room
+# APL Auction
 
-APL Auction Room is a no-API IPL auction strategy simulator. Users get a fixed auction budget, buy players, build a balanced playing XI, and use a local strategy coach to receive squad recommendations.
+An interactive cricket auction simulator built with React and Tailwind CSS. Test your tactical skills by building a balanced 11-player squad while managing a limited budget of Rs 100 Crore.
 
-## Features
+## 🚀 Features
 
-- IPL-style player auction simulator
-- Rs 100 Cr budget system
-- Player pool with batters, bowlers, all-rounders, and wicket-keepers
-- Build a starting XI
-- Role balance tracker
-- Team score calculation
-- Local strategy advisor with no API key required
-- Squad analysis, next-player suggestion, and final verdict
-- Fully static HTML, CSS, and JavaScript app
+- **Real-time Strategy Advisor**: A built-in local advisor that analyzes your squad's balance, budget, and identifies the biggest gaps in your lineup.
+- **Dynamic Auction Mechanics**:
+  - **Budget Tracking**: Real-time updates as you spend on players.
+  - **Role Balancing**: Track your distribution of Batters, Bowlers, All-rounders, and Wicket-keepers.
+  - **Team Scoring**: A proprietary "Squad Score" that evaluates team quality based on player ratings, role balance, and remaining budget.
+- **Interactive Player Pool**: Filter players by role and use the "Advisor" button to get specific bid limit recommendations for each player.
+- **Responsive Design**: Polished dark-mode UI that works across desktop and mobile devices.
 
-## Tech Stack
+## 🏏 How to Play
 
-- HTML
-- CSS
-- JavaScript
-- No backend
-- No API key required
+1. **Pick your Core**: Start by selecting high-rated players to anchor your team.
+2. **Consult the Advisor**: Before buying, click the **Advisor** button on a player card to see the calculated "Max Bid" based on your current needs.
+3. **Balance the XI**: Try to aim for the ideal composition:
+   - 4 Batters
+   - 3 Bowlers
+   - 3 All-rounders
+   - 1 Wicket-keeper
+4. **Win the Auction**: Complete your 11-player squad with the highest possible Team Score.
 
-## How It Works
+## 🛠️ Technical Details
 
-1. Choose players from the auction pool.
-2. Set a bid amount and buy players.
-3. Build a squad of up to 11 players.
-4. Use the strategy coach to analyse your squad.
-5. Improve role balance and team score.
-6. Get a final verdict on your auction strategy.
+- **Framework**: React 19
+- **Styling**: Tailwind CSS 4.0
+- **Icons**: Lucide React
+- **Animations**: Motion (framer-motion)
+- **Deployment**: Optimized for Google Cloud Run via AI Studio.
 
-## Run Locally
+## 📂 Project Structure
 
-Clone the repository:
+- `src/App.tsx`: Main application logic, state management, and strategy algorithm.
+- `src/index.css`: Custom theme variables and global styles.
+- `metadata.json`: Application metadata for the AI Studio environment.
 
-```bash
-git clone YOUR_REPO_URL
-cd YOUR_REPO_NAME
+## 🛡️ Security
 
+This application is designed as a standalone simulator. It does not require external API keys or server-side databases, making it secure and fast as all calculations happen locally in your browser.
